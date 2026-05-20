@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assignment</title>
+
+    <style>
+
+        /* Part 1 : Navigation Bar */
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            background-color:black;
+            padding:15px;
+        }
+
+        .logo{
+            color:white;
+            font-size:22px;
+            font-weight:bold;
+        }
+
+        ul{
+            display:flex;
+            gap:20px;
+            list-style:none;
+            margin:0;
+            padding:0;
+        }
+
+        a{
+            color:white;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        a:hover{
+            color:yellow;
+        }
+
+        /* Part 2 : Photo Gallery */
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(3, 1fr);
+            gap:15px;
+            margin-top:20px;
+            padding:15px;
+        }
+
+        .card{
+            background-color:lightgray;
+            padding:10px;
+            text-align:center;
+        }
+
+        /* First card spans 2 columns */
+
+        .card:first-child{
+            grid-column:span 2;
+        }
+
+        .card img{
+            width:100%;
+            height:auto;
+            display:block;
+        }
+
+        /* Part 3 : Responsive Design */
+
+        /* Tablets */
+
+        @media (max-width:768px){
+
+            nav{
+                flex-direction:column;
+                align-items:center;
+            }
+
+            ul{
+                margin-top:10px;
+            }
+
+            .cards{
+                grid-template-columns:repeat(2, 1fr);
+            }
+
+        }
+
+        /* Phones */
+
+        @media (max-width:600px){
+
+            nav{
+                flex-direction:column;
+                align-items:center;
+            }
+
+            ul{
+                flex-direction:column;
+                align-items:center;
+                gap:10px;
+                margin-top:10px;
+            }
+
+            .cards{
+                grid-template-columns:1fr;
+            }
+
+            .card:first-child{
+                grid-column:span 1;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">Logo</div>
+
+        <ul>
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+    <div class="cards">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" alt="Photo 1">
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e" alt="Photo 2">
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Photo 3">
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Photo 4">
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" alt="Photo 5">
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716" alt="Photo 6">
+        </div>
+
+    </div>
+
+</body>
+
+</html>
